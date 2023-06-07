@@ -175,6 +175,7 @@ jobs:
           jar xf target/uberjar/metabase.jar version.properties
           mv version.properties resources/
 
+          
       - name: Run OSS-specific Cypress tests
         if: matrix.edition == 'oss' && github.event_name != 'schedule'
         run: |
